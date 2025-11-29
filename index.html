@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BrainBloom — Kurse teknologjie | Bledina Berisha</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0F1724;
+      --card:#0B1220;
+      --accent:#7C3AED;
+      --accent-2:#06B6D4;
+      --muted:#9AA7B2;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Poppins",sans-serif;
+      background: linear-gradient(180deg, #071021 0%, #07192a 60%);
+      color:#E6EEF3;
+      line-height:1.5;
+      padding:30px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      margin-bottom:26px;
+    }
+
+    .logo{
+      width:78px;
+      height:78px;
+      border-radius:16px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:grid;
+      place-items:center;
+      box-shadow: 0 8px 30px rgba(124,58,237,0.18);
+    }
+    .logo h1{margin:0;color:white;font-size:30px;font-weight:700;font-family:"Merriweather",serif}
+
+    .brand-text .title{
+      font-size:20px;
+      font-weight:700;
+      color:#fff;
+    }
+    .brand-text .subtitle{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .hero{
+      background:rgba(255,255,255,0.02);
+      border-radius:var(--radius);
+      padding:26px;
+      display:flex;
+      gap:28px;
+      align-items:center;
+      box-shadow:0 6px 30px rgba(2,6,23,0.6);
+      margin-bottom:22px;
+    }
+    .hero-info{flex:1}
+    .hero h2{
+      margin:0 0 8px 0;
+      font-size:26px;
+      font-family:"Merriweather",serif;
+      color:#fff;
+    }
+    .hero p{
+      margin:0 0 14px 0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .badge{
+      background:var(--glass);
+      padding:8px 12px;
+      border-radius:999px;
+      color:var(--accent-2);
+      font-weight:600;
+      font-size:13px;
+      display:inline-block;
+      margin-bottom:12px;
+    }
+
+    .btn{
+      background:linear-gradient(90deg,var(--accent),#5B21B6);
+      color:white;
+      padding:10px 16px;
+      border-radius:10px;
+      border:0;
+      cursor:pointer;
+      font-weight:600;
+    }
+    .btn.alt{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      color:var(--muted);
+    }
+
+    .grid{
+      display:grid;
+      gap:18px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top:18px;
+    }
+
+    @media(max-width:880px){
+      .grid{grid-template-columns:1fr;}
+      .hero{flex-direction:column;align-items:flex-start}
+    }
+
+    .card{
+      background:rgba(255,255,255,0.02);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 20px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .card h3{
+      margin:0 0 8px 0;
+      font-size:18px;
+    }
+    .card ul{padding-left:18px;color:var(--muted)}
+
+    /* Form styles */
+    form input, form select{
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.08);
+      background:transparent;
+      color:#E6EEF3;
+      min-width:160px;
+    }
+
+    footer{
+      margin-top:26px;
+      color:var(--muted);
+      font-size:14px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="logo"><h1>BB</h1></div>
+      <div class="brand-text">
+        <div class="title">BrainBloom</div>
+        <div class="subtitle">Kurse Teknologjie | Udhëheqëse:
+           MSc.Bledina Berisha</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-info">
+        <span class="badge">Moshat 12–20 vjeç</span>
+        <h2>BrainBloom — Kurse & Kuize Teknologjie</h2>
+        <p>
+          Mësoni Office (Word, PowerPoint, Excel, Access), Programim (HTML, CSS, Python) dhe Robotik® (Scratch, Mind+, Arduino) me metoda praktike dhe projekte reale.
+        </p>
+
+        <button class="btn" onclick="document.getElementById('enroll').scrollIntoView({behavior:'smooth'})">Regjistrohu tani</button>
+      </div>
+
+      <div class="card" style="text-align:center;min-width:180px">
+        <h3 style="color:var(--accent-2);font-size:22px;margin:0">50€ / muaj</h3>
+        <p style="color:var(--muted);font-size:13px;margin-top:4px">Varet nga fusha dhe niveli</p>
+      </div>
+    </section>
+
+    <!-- Kurset -->
+    <main class="grid">
+      <div class="card">
+        <h3>Office</h3>
+        <ul>
+          <li>Word</li>
+          <li>PowerPoint</li>
+          <li>Excel</li>
+          <li>Access</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Programim</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Python</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Robotik®</h3>
+        <ul>
+          <li>Scratch</li>
+          <li>Mind+</li>
+          <li>Arduino</li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- FORMULARI -->
+    <section id="enroll" class="card" style="margin-top:20px">
+      <h3>Regjistrim</h3>
+      <p style="color:var(--muted)">Plotëso formularin dhe të dhënat do të dërgohen direkt tek ne.</p>
+
+      <form action="https://formsubmit.co/bledinaberisha@gmail.com" method="POST">
+
+        <!-- FormSubmit Settings -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://formsubmit.co/thank-you">
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+          <input type="text" name="Emri" placeholder="Emri dhe mbiemri" required>
+          <input type="email" name="Email" placeholder="Email" required>
+          <input type="text" name="Telefoni" placeholder="Telefon (opsional)">
+
+          <select name="Fusha" required>
+            <option value="">Zgjidh fushën...</option>
+            <option>Office — Word / PowerPoint / Excel / Access</option>
+            <option>Programim — HTML / CSS / Python</option>
+            <option>Robotik® — Scratch / Mind+ / Arduino</option>
+          </select>
+
+          <select name="Mosha" required>
+            <option value="">Mosha</option>
+            <option>12-14</option>
+            <option>15-17</option>
+            <option>18-20</option>
+          </select>
+        </div>
+
+        <button class="btn" style="margin-top:14px" type="submit">Dërgo regjistrimin</button>
+
+      </form>
+    </section>
+
+    <footer>
+      <div>© BrainBloom — Bledina Berisha</div>
+      <div>Email kontakti: <strong style="color:#fff">bledinaberisha@gmail.com</strong></div>
+    </footer>
+
+  </div>
+</body>
+</html>
